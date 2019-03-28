@@ -20,26 +20,26 @@ or if you want to run manually...
 
 1. Create the `nginx-proxy` network:
 
-```bash
-$ docker network create nginx-proxy
-```
+    ```bash
+    $ docker network create nginx-proxy
+    ```
 
-1. Create required folders for SSL:
+1. Create required folders for nginx and letsencrypt container:
 
-```bash
-$ sudo mkdir -p /root/nginx-data/certs
-$ sudo chmod a+w /root/nginx-data/certs
-$ sudo mkdir -p /root/nginx-data/vhost.d
-$ sudo chmod a+w /root/nginx-data/vhost.d
-$ sudo mkdir -p /root/nginx-data/html
-$ sudo chmod a+w /root/nginx-data/html
-```
+    ```bash
+    $ sudo mkdir -p /root/nginx-data/certs
+    $ sudo chmod a+w /root/nginx-data/certs
+    $ sudo mkdir -p /root/nginx-data/vhost.d
+    $ sudo chmod a+w /root/nginx-data/vhost.d
+    $ sudo mkdir -p /root/nginx-data/html
+    $ sudo chmod a+w /root/nginx-data/html
+    ```
 
-1. Start the nginx-proxy and letsncrypt containeres
+1. Start the nginx-proxy and letsncrypt containers
 
-```
-$ docker-compose up -d
-```
+    ```
+    $ docker-compose up -d
+    ```
 
 ## Deploying Apps
 
