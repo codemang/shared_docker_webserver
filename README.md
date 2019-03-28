@@ -1,7 +1,14 @@
-Shared Dockerized Webserver
+Shared Docker Webserver
 =
 
-## Running
+This repo contains a script which creates two docker containers that run
+nginx-proxy and letsencrypt.  This enables me to very simply deploy many apps to
+the same physical server. As a bonus, I get SSL for free!
+
+Props to [JrCs](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion) for the
+great build.
+
+## Running Webserver
 
 You can simply invoke the [run.sh](script)
 
@@ -9,7 +16,7 @@ You can simply invoke the [run.sh](script)
 $ ./run.sh
 ```
 
-or if you wnat to run manually...
+or if you want to run manually...
 
 1. Create the `nginx-proxy` network:
 
@@ -33,3 +40,8 @@ $ chmod a+w /root/nginx-data/html
 ```
 $ docker-compose up -d
 ```
+
+## Deploying Apps
+
+I use [orats](https://github.com/nickjj/orats) to generate new Rails projects.
+Once I have a Rails project, there
