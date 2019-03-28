@@ -27,12 +27,12 @@ $ docker network create nginx-proxy
 1. Create required folders for SSL:
 
 ```bash
-$ mkdir -p /root/nginx-data/certs
-$ chmod a+w /root/nginx-data/certs
-$ mkdir -p /root/nginx-data/vhost.d
-$ chmod a+w /root/nginx-data/vhost.d
-$ mkdir -p /root/nginx-data/html
-$ chmod a+w /root/nginx-data/html
+$ sudo mkdir -p /root/nginx-data/certs
+$ sudo chmod a+w /root/nginx-data/certs
+$ sudo mkdir -p /root/nginx-data/vhost.d
+$ sudo chmod a+w /root/nginx-data/vhost.d
+$ sudo mkdir -p /root/nginx-data/html
+$ sudo chmod a+w /root/nginx-data/html
 ```
 
 1. Start the nginx-proxy and letsncrypt containeres
@@ -44,4 +44,3 @@ $ docker-compose up -d
 ## Deploying Apps
 
 I use [orats](https://github.com/nickjj/orats) to generate new Rails projects.
-Once I have a Rails project, there
